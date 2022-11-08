@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(
+    160deg,
+    rgba(171, 210, 239, 1) 0%,
+    rgba(213, 232, 247, 1) 100%
+  );
+  overflow: hidden;
+}
+
+.floor {
+  width: 200%;
+  height: 3vmin;
+  background-image: url("../images/game_assets/environment/desertGround.svg");
+  background-size: contain;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  animation: moveFloor 3s linear infinite;
+}
+
+@keyframes moveFloor {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translate(-50%);
+  }
+}
+
+.player {
+  width: 15vmin;
+  height: 25vmin;
+  position: absolute;
+  bottom: 3vmin;
+  left: 12vmin;
+  background-image: url("../images/game_assets/characters/yellowDigimon/default.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.sun {
+  background-image: url("../images/game_assets/environment/sun.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 17.5vmin;
+  height: 17.5vmin;
+  position: absolute;
+  top: 10vmin;
+  right: 10vmin;
+  animation: moveSun 1s infinite linear;
+}
+
+@keyframes moveSun {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.clouds {
+  background-image: url("../images/game_assets/environment/clouds.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30vmin;
+  height: 15vmin;
+  position: absolute;
+  top: 15vmin;
+  right: 10vmin;
+  animation: moveClouds 3s linear infinite;
+}
+
+.clouds::after {
+  content: "";
+  display: block;
+  background-image: url("../images/game_assets/environment/clouds.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30vmin;
+  height: 30vmin;
+  position: absolute;
+  top: 0vmin;
+  right: 100vmin;
+}
+
+@keyframes moveClouds {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
