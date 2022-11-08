@@ -30,4 +30,4 @@ spriteAnimation(document.querySelector(".player"), spriteArr);
 spriteAnimation(document.querySelector(".player"), spriteArr);
 spriteAnimation(document.querySelector(".player"), spriteArr);
 
-const test = setInterval(spriteAnimation.bind(this,document.querySelector(".player"), spriteArr),50)
+const test = setInterval(spriteAnimation.bind(this,document.querySelector(".player"), spriteArr),500)

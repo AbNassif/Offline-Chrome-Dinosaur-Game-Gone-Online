@@ -27,7 +27,7 @@ body {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  animation: moveFloor 3s linear infinite;
+  animation: moveFloor 15s linear infinite;
 }
 
 @keyframes moveFloor {
@@ -84,7 +84,7 @@ body {
   position: absolute;
   top: 15vmin;
   right: 10vmin;
-  animation: moveClouds 3s linear infinite;
+  animation: moveClouds 15s linear infinite;
 }
 
 .clouds::after {
