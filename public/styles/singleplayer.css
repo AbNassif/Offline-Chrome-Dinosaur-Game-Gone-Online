@@ -53,7 +53,6 @@ body {
   position: absolute;
   bottom: 3vmin;
   left: 12vmin;
-  /* animation: jump 0.7s linear ; */
 }
 
 @keyframes jump {
@@ -101,7 +100,7 @@ body {
   position: absolute;
   top: 15vmin;
   right: 10vmin;
-  animation: moveClouds 5s linear infinite;
+  animation: rightToLeft 5s linear infinite;
 }
 
 .clouds::after {
@@ -117,18 +116,11 @@ body {
   right: 100vmin;
 }
 
-@keyframes moveClouds {
+@keyframes rightToLeft {
   0% {
     right: -100%;
   }
   100% {
     right: 100%;
   }
-}
-
-img {
-  position: absolute;
-  bottom: 3vmin;
-  left: 50%;
-  height: 16vmin;
 }
